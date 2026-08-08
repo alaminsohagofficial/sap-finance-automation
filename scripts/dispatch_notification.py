@@ -1,13 +1,24 @@
 import json
 import requests
 
-# Load SMS Payload
-with open('payloads/sms_002905.json') as f:
-    sms_data = json.load(f)
+def send_butterfly_settlement_notification():
+    # payloads/butterfly_final_settlement.json থেকে ডাটা পড়া
+    with open('payloads/butterfly_final_settlement.json', 'r', encoding='utf-8') as file:
+        data = json.load(file)
 
-# Example: Dispatching to SMS Gateway API
-# sms_response = requests.post("https://api.your-sms-gateway.com/send", json=sms_data)
-# print("SMS Status:", sms_response.status_code)
+    dealer = data['dealer_profile']['dealer_name']
+    code = data['dealer_profile']['dealer_code']
+    invoice = data['dealer_profile']['invoice_ref']
+    pdf_url = data['audit_links']['s3_ledger_pdf']
 
-print(f"Ready to dispatch SMS to {sms_data['recipient']}...")
-print(f"Message: {sms_data['message']}")
+    # অটোমেটেড এসএমএস টেক্সট
+    sms_message = (
+        f"Dear Partner ({dealer} - {code}), Invoice {invoice} (298 pcs) is FULLY SETTLED. "
+        f"Outstanding Balance: BDT 0.00 (Doc #5100030102). Download Ledger: {pdf_url} - Butterfly Marketing Ltd."
+    )
+
+    print("--- Updated Dispatch Message ---")
+    print(sms_message)
+
+if __name__ == "__main__":
+    send_butterfly_settlement_notification()
