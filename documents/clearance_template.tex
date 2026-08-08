@@ -1,0 +1,123 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[a4paper, top=2cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{fontspec}
+\usepackage[english, bidi=basic, provide=*]{babel}
+\babelprovide[import, onchar=ids fonts]{english}
+\babelfont{rm}{Noto Sans}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage[many]{tcolorbox}
+
+\definecolor{navyblue}{RGB}{15, 41, 74}
+\definecolor{brandred}{RGB}{180, 20, 20}
+\definecolor{lightbg}{RGB}{248, 249, 250}
+\definecolor{bordergray}{RGB}{215, 220, 228}
+\definecolor{statusgreen}{RGB}{16, 124, 65}
+\definecolor{darktext}{RGB}{30, 35, 45}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+
+\begin{document}
+
+\begin{center}
+    {\Huge \bfseries \color{navyblue} MINISTER HI-TECH PARK} \\[2pt]
+    {\large \bfseries \color{brandred} ELECTRONICS LTD.} \\[6pt]
+    {\small \color{darktext} Head Office: 33, Gulshan Avenue, Dhaka-1212, Bangladesh \quad|\quad Phone: +880-2-9888888} \\
+    {\small \color{darktext} Web: \texttt{www.ministerbd.com} \quad|\quad Email: \texttt{erp.finance@ministerbd.com}}
+\end{center}
+
+\vspace{-4pt}
+\color{navyblue}\hrule height 1.8pt
+\vspace{2pt}
+\color{brandred}\hrule height 0.6pt
+\vspace{10pt}
+
+\begin{tcolorbox}[colback=lightbg, colframe=bordergray, arc=3pt, boxrule=0.5pt, left=8pt, right=8pt, top=6pt, bottom=6pt]
+\small
+\begin{tabularx}{\textwidth}{@{}X X@{}}
+\textbf{Ref. No.:} MHPIL/FIN-SAP/2026/08-018 & \textbf{Settlement Date:} August 02, 2026 \\
+\textbf{Category:} Corporate Finance \& ERP & \textbf{SAP Doc Type:} DZ / SA \\
+\end{tabularx}
+\end{tcolorbox}
+
+\vspace{4pt}
+
+\begin{tcolorbox}[colback=navyblue, colupper=white, halign=center, boxrule=0pt, arc=3pt, top=7pt, bottom=7pt]
+    {\large \bfseries OFFICIAL PAYMENT \& DISPUTE CLEARANCE CONFIRMATION}
+\end{tcolorbox}
+
+\vspace{4pt}
+
+\begin{tcolorbox}[colback=white, colframe=bordergray, arc=3pt, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}l l@{}}
+\textbf{To:} & Commercial Operations \& Dealer Accounts \\
+\textbf{Customer / Dealer Code:} & \textbf{002905} \\
+\textbf{Subject:} & \textbf{Official ERP Clearance Confirmation for Transaction Ref: IBBLFT260701801} \\
+\end{tabular}
+\end{tcolorbox}
+
+\vspace{6pt}
+
+\textcolor{darktext}{Dear Concern,}
+
+\textcolor{darktext}{This official confirmation letter certifies that \textbf{Minister Hi-Tech Park Electronics Ltd. (MHPIL)} has verified, logged, and cleared the financial settlement detailed below within our central SAP ERP system.}
+
+\vspace{8pt}
+
+{\large \bfseries \color{navyblue} 1. SAP Financial Transaction Details}
+\vspace{4pt}
+
+\begin{tcolorbox}[colback=lightbg, colframe=navyblue, arc=3pt, boxrule=0.8pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\renewcommand{\arraystretch}{1.35}
+\small
+\begin{tabularx}{\textwidth}{@{} >{\bfseries\color{navyblue}}l X @{}}
+Company Code: & MHPIL (Minister Hi-Tech Park Electronics Ltd.) \\
+SAP Document Number: & \textbf{5100029481} \\
+Bank Reference Number: & \textbf{IBBLFT260701801} \\
+Depository House Bank: & Islami Bank Bangladesh Ltd. (IBBL), Banani Branch \\
+& A/C: 20503910100020103 \\
+Posting \& Value Date: & August 02, 2026 \\
+Cleared Amount: & \textbf{\color{navyblue} BDT 13,269,545.00} \\
+& \textit{(Thirteen Million Two Hundred Sixty-Nine Thousand Five Hundred} \\
+& \textit{Forty-Five BDT Only)} \\
+SAP Accounting Status: & \textbf{\color{statusgreen} Cleared} \textit{(Matched against open dispute items)} \\
+\end{tabularx}
+\end{tcolorbox}
+
+\vspace{8pt}
+
+{\large \bfseries \color{navyblue} 2. Operational \& Supply Chain Authorizations}
+\vspace{4pt}
+
+\begin{tcolorbox}[colback=white, colframe=bordergray, arc=3pt, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\small
+\begin{description}[leftmargin=0pt, style=unboxed, itemsep=8pt]
+    \item[\bfseries Financial Accounting (FI-AR):] Customer account balance for Dealer Code \textbf{002905} has been updated and outstanding disputes are cleared.
+    \item[\bfseries Sales \& Distribution (SD):] Delivery block on \textbf{450 inventory units} has been officially lifted. Warehouse operations are authorized to proceed with delivery execution.
+\end{description}
+\end{tcolorbox}
+
+\vspace{4pt}
+
+\begin{tcolorbox}[colback=lightbg, colframe=bordergray, arc=2pt, boxrule=0.5pt, left=8pt, right=8pt, top=5pt, bottom=5pt]
+\small \textbf{System Verification Note:} Generated via SAP S/4HANA ERP Operations. For audit verification, please reference Document Number \textbf{5100029481}.
+\end{tcolorbox}
+
+\vspace{30pt}
+
+\begin{tabularx}{\textwidth}{@{}X @{\hspace{1.5cm}} X@{}}
+\rule{\linewidth}{0.5pt} \\[4pt]
+\textbf{Manager, Accounts Receivable} \\
+Finance Operations, MHPIL &
+\rule{\linewidth}{0.5pt} \\[4pt]
+\textbf{Head of Finance \& ERP} \\
+Minister Hi-Tech Park Electronics Ltd. \\
+\end{tabularx}
+
+\end{document}
