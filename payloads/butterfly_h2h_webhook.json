@@ -1,9 +1,18 @@
 {
-  "transaction_id": "BML-H2H-20260808-001",
-  "bank_name": "Dutch-Bangla Bank Ltd.",
-  "dealer_code": "BML-00452",
-  "cleared_amount": 1500000.00,
-  "currency": "BDT",
-  "sap_doc_type": "DZ",
-  "auto_clearing_status": "AUTO-API CLEARED"
+  "event_type": "BANK_PAYMENT_RECEIVED",
+  "timestamp": "2026-08-08T23:51:42Z",
+  "transaction_details": {
+    "bank_reference": "DBBL-H2H-20260808-001",
+    "bank_name": "Dutch-Bangla Bank Ltd.",
+    "account_number": "1011200045678",
+    "dealer_code": "BML-00452",
+    "cleared_amount": 1500000.00,
+    "currency": "BDT"
+  },
+  "sap_mapping": {
+    "company_code": "BML",
+    "document_type": "DZ",
+    "auto_clearing_flag": "AUTO-API CLEARED",
+    "gl_account": "110001"
+  }
 }
