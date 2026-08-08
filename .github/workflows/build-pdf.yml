@@ -1,0 +1,25 @@
+name: Compile LaTeX Clearance PDFs
+
+on:
+  push:
+    paths:
+      - 'documents/*.tex'
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Compile LaTeX to PDF
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: documents/*.tex
+          compiler: xelatex
+
+      - name: Upload Generated PDF
+        uses: actions/upload-artifact@v3
+        with:
+          name: SAP-Clearance-PDFs
+          path: '*.pdf'
