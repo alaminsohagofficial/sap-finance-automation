@@ -1,0 +1,23 @@
+{
+  "event_type": "FINAL_SETTLEMENT_CLEARANCE",
+  "timestamp": "2026-08-08T23:55:00Z",
+  "dealer_profile": {
+    "dealer_name": "SR Electronics Park (Chuadanga Branch)",
+    "dealer_code": "3000002272",
+    "proprietor": "MD. AL AMIN SOHAG",
+    "settlement_period": "01 Jan 2026 - 28 Jul 2026",
+    "credited_account": "Butterfly Marketing Limited - A/C 1051100008683"
+  },
+  "reconciliation_breakdown": [
+    { "description": "Total Collections (Jan-Jul 2026)", "amount_bdt": 452734.00 },
+    { "description": "Total RTGS Deposits (City Bank > DBBL)", "amount_bdt": 20000000.00 },
+    { "description": "Total NexusPay Settlements (DBBL Transfers)", "amount_bdt": 1029000.00 },
+    { "description": "Sonali Bank RTGS Settlement", "amount_bdt": 10400000.00 },
+    { "description": "Total Bank RTGS (Orponitc Settlement)", "amount_bdt": 10400000.00 }
+  ],
+  "sap_accounting_status": {
+    "total_reconciled_amount_bdt": 32449734.00,
+    "final_outstanding_balance_bdt": 0.00,
+    "clearing_status": "FULLY_SETTLED_DZ_CLEARED"
+  }
+}
