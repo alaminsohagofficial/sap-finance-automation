@@ -1,0 +1,16 @@
+{
+  "event_type": "WAREHOUSE_DEPOSIT_RECONCILIATION",
+  "timestamp": "2026-08-09T19:30:00Z",
+  "warehouse_details": {
+    "warehouse_name": "Jessore Regional Warehouse",
+    "company_code": "Butterfly Marketing Limited",
+    "inventory_product_value_bdt": 85000000.00,
+    "inventory_threshold": "LESS_THAN_10_CRORE"
+  },
+  "financial_summary": {
+    "total_deposit_received_bdt": 550000000.00,
+    "allocated_against_inventory_bdt": 85000000.00,
+    "surplus_advance_buffer_bdt": 465000000.00,
+    "clearing_status": "FULLY_SETTLED_EXCESS_BUFFER_ACTIVE"
+  }
+}
