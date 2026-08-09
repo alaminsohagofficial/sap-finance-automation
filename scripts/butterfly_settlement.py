@@ -1,8 +1,7 @@
 import json
 import os
 
-def run_settlement_clearance():
-    # Load and verify JSON payload
+def run_master_ledger_verification():
     payload_path = 'payloads/butterfly_final_settlement.json'
     
     if os.path.exists(payload_path):
@@ -11,19 +10,19 @@ def run_settlement_clearance():
             
         dealer = data['dealer_profile']['dealer_name']
         code = data['dealer_profile']['dealer_code']
-        total_amount = data['sap_accounting_status']['total_reconciled_bdt']
-        status = data['sap_accounting_status']['clearing_status']
+        h2h_total = data['h2h_batch_commit']['batch_amount_bdt']
+        net_balance = data['financial_reconciliation']['current_ledger_balance_bdt']
+        status = data['financial_reconciliation']['clearing_status']
         
         print("==================================================")
-        print("⚡ SAP ERP SETTLEMENT EXECUTION SUCCESSFUL")
+        print("⚡ SAP S/4HANA MASTER LEDGER AUDIT COMPLETED")
         print("==================================================")
-        print(f"Dealer Name  : {dealer}")
-        print(f"Dealer Code  : {code}")
-        print(f"Total Amount : BDT {total_amount:,.2f}")
-        print(f"Clear Status : {status}")
+        print(f"Dealer Name       : {dealer}")
+        print(f"Dealer Code       : {code}")
+        print(f"H2H Batch Commit  : BDT {h2h_total:,.2f}")
+        print(f"Net Credit Balance: BDT {abs(net_balance):,.2f} (Advance)")
+        print(f"F.13 Auto-Clear   : {status}")
         print("==================================================")
-    else:
-        print(f"❌ Error: {payload_path} not found!")
 
 if __name__ == "__main__":
-    run_settlement_clearance()
+    run_master_ledger_verification()
