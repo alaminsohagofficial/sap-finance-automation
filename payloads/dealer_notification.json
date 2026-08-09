@@ -1,14 +1,15 @@
 {
   "dealer_id": "002905",
+  "group_name": "Minister Myone Group",
+  "company": "Minister Hi-Tech Park Electronics Ltd.",
   "sms_payload": {
     "recipient": "+8801719732134",
+    "sender_id": "MINISTERBD",
     "message": "Dear Partner (Dealer 002905), payment of BDT 13,269,545.00 (Ref: IBBLFT260701801) is cleared in SAP (Doc: 5100029481). Delivery block on 450 units has been lifted. - Minister Hi-Tech Park Electronics Ltd."
   },
   "email_payload": {
     "to": "alaminsohag2024@gmail.com",
     "subject": "Official Payment & Settlement Confirmation - Dealer Code 002905 [SAP Doc: 5100029481]",
-    "cleared_amount": "BDT 13,269,545.00",
-    "sap_document": "5100029481",
     "status": "Cleared"
   }
 }
