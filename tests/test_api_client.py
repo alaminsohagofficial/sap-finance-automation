@@ -35,3 +35,4 @@ def test_fetch_data_error(mock_get, client):
 
   with pytest.raises(HTTPError):
     client.fetch_data("error-endpoint")
+    
